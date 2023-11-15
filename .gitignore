@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/src/redux/features/post/constants.js
 /.pnp
 .pnp.js
 
