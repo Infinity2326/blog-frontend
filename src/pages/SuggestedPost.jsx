@@ -6,7 +6,6 @@ import Moment from "react-moment"
 import axios from "../utils/axios"
 import { checkIsAuth } from "../redux/features/auth/authSlice"
 import { approvePost, removePost } from "../redux/features/post/postSlice"
-import "moment/locale/ru"
 
 export const SuggestedPost = () => {
   const [post, setPost] = useState(null)
@@ -80,7 +79,7 @@ export const SuggestedPost = () => {
           <div className="flex justify-between items-center pt-2">
             <div className="text-xs text-white opacity-50">{post.username}</div>
             <div className="text-xs text-white opacity-50">
-              <Moment data={post.createdAt} format="D MMM YYYY" />
+              <Moment locale="ru" data={post.createdAt} format="D MMM YYYY" />
             </div>
           </div>
           <div className="text-white text-xl">{post.title}</div>
