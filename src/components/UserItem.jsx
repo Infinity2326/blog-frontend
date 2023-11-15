@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Moment from "react-moment"
 import { useDispatch, useSelector } from "react-redux"
 import { updateUser } from "../redux/features/auth/authSlice"
-import "moment/locale/ru"
 import { Dropdown } from "flowbite-react"
 import { toast } from "react-toastify"
 
@@ -31,6 +30,7 @@ export const UserItem = ({ user }) => {
           onClick={() => console.log(user.createdAt)}
           date={user.createdAt}
           format="D MMM YYYY"
+          locale="ru"
         />
       </td>
       <td className="px-6 py-4 font-medium whitespace-nowrap text-white">
